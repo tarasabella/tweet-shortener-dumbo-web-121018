@@ -14,6 +14,10 @@ def dictionary
 }
 end
 
+
+
+
+# replaces long workds with their short form
 def word_substituter(str)
    #turn str to array using split
    tweet = str.split(" ")
@@ -32,9 +36,13 @@ end
 
 #Another solution:
 def word_substituter(str)
+  #define a method that accepts a string of a tweet as an argument and shorten its based on rhe expected shortform
    tweet = str.split(" ")
+   #create a variable tween and turn the string into an array with split 
    tweet.each_with_index do |word, index|
+     itererate through each element of the string 
       dictionary.each do |key, value|
+        
          if word.downcase == key
             tweet[index] = value
          end
